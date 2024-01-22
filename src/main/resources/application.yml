@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: Nag@15199
+    url: jdbc:mysql://localhost:3306/insurance
+    username: root
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+    
+server:
+  port: 9091
+  error:
+    whitelabel:
+      enabled: false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+        exclude: health
+        
+ 
